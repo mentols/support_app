@@ -7,5 +7,7 @@ admin.site.register(Ticket)
 
 class ProjectImageAdmin(admin.ModelAdmin):
     list_display = [Ticket, 'status']
-    fields = ['id', 'status']
+    fields = ['id', 'status', 'content']
     list_editable = ['status']
+
+

@@ -1,7 +1,7 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
-# class User(models.Model):
 
 class Ticket(models.Model):
     RESOLVED = 'RESOl'
@@ -12,5 +12,5 @@ class Ticket(models.Model):
         (UNRESOLVED, 'Unresolved'),
         (FROZEN, 'Frozen')
     ]
-
     status = models.CharField(max_length=5, choices=STATUS, default=FROZEN, null=False)
+    content = models.CharField(max_length=5000, null=True)
